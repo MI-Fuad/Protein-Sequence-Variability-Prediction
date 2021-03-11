@@ -1,2 +1,2 @@
-# Protein-Sequence-Variability-Prediction
-This project investigates the protein sequence variability prediction using machine learning methods. 
+# MLDyn2Seq
+Machine Learning predictor of protein sequence variability from dynamics
