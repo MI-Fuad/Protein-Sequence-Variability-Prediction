@@ -35,7 +35,7 @@ Molecular simulation methods are utilised to simulate and analyse physical movem
 
 The lab team has run molecular-dynamic simulations software GROMACS using a coarse-grained force field called SIRAH. As a result, the **Root-mean square fluctuation (RMSF)** was calculated from the coordinates of the simulation, which essentially provides compressed information of the protein dynamics. The **RMSF** measures the deviation of the coarse-grained model position with respect to a reference coordinates over time.
 
-#### - Data Preparation 
+## Data Preparation 
 
 As mentioned above, the information on the composition of this protein in different organisms, was obtained performing MSA using HHblits.This resulted into a matrix of 164 columns and 1112 rows. Thus 1112 sequences from various organisms with various combinations of the 20 amino acids were aligned. \
 From this matrix, valuable information could be gained that was required for the rest of the analysis. \
@@ -43,7 +43,7 @@ By calculating the **relative frequency** of each position on the amino acid seq
 From this the **Shannon’s entropy** could be calculated as a measure of **variability**, which represents what we would like to predict using the Machine Learning models, the output. 
 
 
-### Machine Learning Methods
+## Machine Learning Methods
 
 Machine Learning (ML) methods given their capabilities to identify hidden patterns in the provided data by learning over time in an self-directed manner are suitable for predicting positions in an amino acid sequence where structural changes can be made. Amongst the two main types of Machine Learning, supervised leaning is of interest for the purpose of this study as the aim is to try building a model which is able capture the relationship between **frequencies of residue occurrence** provided by the data on the composition of a protein from different organisms (MSA), coupled with the **protein dynamics (RMSF)** and the given example of what the **output (Shannon's entropy)** should look like. \
 
@@ -53,8 +53,18 @@ The ML methods explored here were:
 - Random Forests
 - Deep Neural Networks
 
+## Model Evaluation Techniques - Training and Testing
 
+It is fundamentally essential to utilise robust techniques to train and evaluate model’s performance on the training data available at hand, as the more reliable the estimate of a model, the more one can push the model and be self-assured of it will interpret to the operational utilisation of the model. Evaluation techniques used: 
+- Holdout method
+- k-fold cross-validation
 
+## Performance Evaluation Metrics
+-  The Mean Squared Error (MSE)
+-  The Root Mean Squared Error(RMSE)
+-  Mean Absolute Error (MAE)
+ 
 
+# Exploratory Data Analysis
 
 
