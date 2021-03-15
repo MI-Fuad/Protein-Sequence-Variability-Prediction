@@ -39,8 +39,12 @@ The lab team has run molecular-dynamic simulations software GROMACS using a coar
 
 As mentioned above, the information on the composition of this protein in different organisms, was obtained performing MSA using HHblits.This resulted into a matrix of 164 columns and 1112 rows. Thus 1112 sequences from various organisms with various combinations of the 20 amino acids were aligned. \
 From this matrix, valuable information could be gained that was required for the rest of the analysis. \
+
+<img src="images/img_003.png">
+
 By calculating the **relative frequency** of each position on the amino acid sequence, we gained information on the number of times a specific amino acid was present compared to the total number of occurrences. \
 From this the **Shannon’s entropy** could be calculated as a measure of **variability**, which represents what we would like to predict using the Machine Learning models, the output. 
+<img src="images/img_002.png">
 
 
 ## Machine Learning Methods
