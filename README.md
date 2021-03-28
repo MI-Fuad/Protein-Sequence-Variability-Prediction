@@ -72,6 +72,13 @@ It is fundamentally essential to utilise robust techniques to train and evaluate
 # Data Analysis and Results 
 
 ## Exploratory Data Analysis
+Prior to formal modelling of the data, some exploratory data analysis was carried out to maximise the insight on the data-set. This included exploration of the Multiple Sequence Alignment data which assessed the assumptions of amino acid information gained from the literature review. \
+
+Amino acids can be loosely classified as **hydrophobic, polar, charged and amphipathic** based on the chemical characteristics in the side chains. The amino acids from the multiple sequence alignment data is visualised below according to the colours as specified in the legend.
+<img src="images/img_004.png">
+<img src="images/img_005.png">
+
+
 
 ## Performance Evaluation
 
