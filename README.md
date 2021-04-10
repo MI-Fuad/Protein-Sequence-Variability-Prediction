@@ -72,12 +72,14 @@ It is fundamentally essential to utilise robust techniques to train and evaluate
 # Data Analysis and Results 
 
 ## Exploratory Data Analysis
-Prior to formal modelling of the data, some exploratory data analysis was carried out to maximise the insight on the data-set. This included exploration of the Multiple Sequence Alignment data which assessed the assumptions of amino acid information gained from the literature review. \
+Prior to formal modelling of the data, some exploratory data analysis was carried out to maximise the insight on the data-set. This included exploration of the Multiple Sequence Alignment data which assessed the assumptions of amino acid information gained from the literature review. 
 
-Amino acids can be loosely classified as **hydrophobic, polar, charged and amphipathic** based on the chemical characteristics in the side chains. The amino acids from the multiple sequence alignment data is visualised below according to the colours as specified in the legend.
+Amino acids can be loosely classified as **hydrophobic, polar, charged and amphipathic** based on the chemical characteristics in the side chains. The amino acids from the multiple sequence alignment data is visualised below according to the colours as specified in the legend. It is very useful to analyse the multiple sequence alignment as functional and structural information can be obtained from analysing the conservation pattern within an alignment. \
 <img src="images/img_004.png">
-<img src="images/img_005.png">
 
+Generally, **charged and polar** residues for the lysozyme protein tend to be on the surface, and are less preserved overall, while **hydrophobic** residues tend to be in the core, resulting in greater preservation. This presumption can be confirmed, by the visualisation below of protein structure according to the colour scheme of the amino acids based on their categories as specified on table above. **The surface result being emphasised by more polar and charged residues and the core by more hydrophobic residues.**
+
+<img src="images/img_005.png">
 
 
 ## Performance Evaluation
