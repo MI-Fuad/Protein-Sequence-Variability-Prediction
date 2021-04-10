@@ -116,6 +116,15 @@ As previously mentioned, the Root means square fluctuation (RMSF) provides compr
 Combining the two concepts mentioned above, the variability and flexibility one can learn a lot about a protein. Thus, it is worthwhile plotting the values of RMSF and Shannon entropy on the same plot for each position of the protein sequence alignment data. The values were both standardised to be comparable. Inspecting the graph, it is possible to observe the lines diverging from one another on the ends; there are regions where they match roughly but others where they diverge. More on this is discussed under performance evaluation.
 
 ## Performance Evaluation
+### Analysis based on validation method
+**Holdout Method**
+
+The results obtained from the holdout validation method does not provide possibility to discuss them on the same framework . Reason being, training and testing set split of 70% and 30% were different for each machine learning method as they were randomly selected during the process. Thus, it is difficult to make direct comparisons between the models which were tested and trained with holdout. 
+
+<img src="images/img_012.png" width="600" height="300">
+
+It is more appropriate to say, it provides a general overview of the model performances. Based on the table of results below, for the random prediction on 30% of the data, it is possible to observe random forest performs the best, followed by decision tree, neural network and finally linear regression. However, it is possible to compare models directly using the results obtained from the next validation method.
+**K-fold cross-validation**
 
 ## Results
 
