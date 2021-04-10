@@ -157,7 +157,7 @@ From the images of the error mapped in the protein, it is possible to notice the
 
 The machine learning methods can be directly compared for a specific fold, as cross-validation allows this. Thanks to cross-validation it is possible to compare the different methods and inspect their performance by positions. In this section discussion of results obtained by fold is carried out. **Two interesting insights are found.**
 
-**Inspecting folds by method**
+**- Inspecting folds by method**
 
 Looking at the first fold for each of the method we can observe prominent differences. For this specific part of the protein, fold 1, it is quite intuitive to say linear regression performs the best amongst all the methods, at predicting the entropy value despite the fact it is overall the worst machine learning method studied here (see table of results above). Specifically for the presence of more blue toned colours than red ones. 
 
@@ -166,13 +166,32 @@ Looking at the first fold for each of the method we can observe prominent differ
 
 <img src="images/img_017.png">
 
-**Inspecting folds with high error**
+**- Inspecting folds with high error**
 
 While examining the different folds mapping of performance, we can notice the presence of a pattern across the folds and methods. Specifically, it is possible to see certain regions of the protein having high difference between actual and predicted values. Observing figure  **Linear regression fold 1** image above mapped by the linear regression method, one can  notice a certain part of the prediction being purely red, indicating high error. Possibility of such behaviour is somewhat reasonable, given the fact it is the worst predictive method out the ones studied here. However, while comparing the outcome of random forest method for the same fold, in figure **Random forest fold 1**, a neighbouring region to the red part in **Linear regression fold 1**, is also noticeable. Likewise, decision tree and neural network perform not so well for this local fold. Amongst others, a similar occurrence can be observed in fold number 9 , as seen below. 
 
 **This is an indication of the machine learning models struggling to predict well for specific local folds.**
 
 <img src="images/img_018.png">
+
+### Comparison of best and worst model and discussions of findings
+
+One of the richest form of data visualisation is scatter plots of the actual against the predicted values for the prediction. Reason being, it provides a sense of how accurate a model is. From the **graph of the linear regression** the dots are more scattered around. Hence, using this model for prediction would result overall in less accurate results. On the other hand, the **graph of the random forest** below shows a more congregated forming overall a strong correlation between the models prediction o and the actual values for the entropy.
+
+<img src="images/img_019.png"> <img src="images/img_020.png">
+
+Furthermore, line charts per position of the predicted and actual entropy values can be plot to further compare the two models performances. As it can be seen, from the graphs below, the predicted entropy produced by the random forest method is much closely fit compared to the one produced by linear regression.
+
+<img src="images/img_021.png">
+<img src="images/img_022.png">
+
+However, referring back to the outcome of the visual evaluation of performance, where it was established that even the best machine learning method amongst the ones presented in this study experiences difficulties when predicting on certain parts of the protein, it would be worthwhile looking back at the initial data of the RMSF in order to gain an understanding on why the best model is not performing well. Plotting the actual and predicted value of the entropy along with the RMSF per position  one can get more insight on their relationship. All three measures are standardised in order to be comparable.
+
+<img src="images/img_023.png">
+
+The graph presents quite insightful observations. As already explained, the predicted and actual plot of entropy demonstrates the performance of the model. Furthermore, it can be used to see places where the random forest model is struggling to predict the entropy. Moreover, plotting the RMSF per position allows to see the relation of flexibility and prediction performance.  As it has been mention earlier, entropy is a measure of variability and RMSF is a measure of flexibility. The higher the entropy value, the more variable the position is; the higher the RMSF value, the more flexible the position.
+
+As it can be seen from the graph, roughly between position 38 and 50 the random forest is not performing at its best. At the same time, for this range of positions the RMSF values are high. This indicates that regions which are more flexible are more difficult to predict. 
 
 
 
