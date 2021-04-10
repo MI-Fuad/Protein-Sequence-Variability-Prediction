@@ -174,16 +174,16 @@ While examining the different folds mapping of performance, we can notice the pr
 
 <img src="images/img_018.png">
 
-### Comparison of best and worst model and discussions of findings
+### Comparison of best and worst model and discussions of findings
 
 One of the richest form of data visualisation is scatter plots of the actual against the predicted values for the prediction. Reason being, it provides a sense of how accurate a model is. From the **graph of the linear regression** the dots are more scattered around. Hence, using this model for prediction would result overall in less accurate results. On the other hand, the **graph of the random forest** below shows a more congregated forming overall a strong correlation between the models prediction o and the actual values for the entropy.
 
-<img src="images/img_019.png"> <img src="images/img_020.png">
+<img src="images/img_019.png" width="600" height="300"> <img src="images/img_020.png" width="600" height="300">
 
 Furthermore, line charts per position of the predicted and actual entropy values can be plot to further compare the two models performances. As it can be seen, from the graphs below, the predicted entropy produced by the random forest method is much closely fit compared to the one produced by linear regression.
 
-<img src="images/img_021.png">
-<img src="images/img_022.png">
+<img src="images/img_021.png" width="800" height="350">
+<img src="images/img_022.png" width="800" height="350">
 
 However, referring back to the outcome of the visual evaluation of performance, where it was established that even the best machine learning method amongst the ones presented in this study experiences difficulties when predicting on certain parts of the protein, it would be worthwhile looking back at the initial data of the RMSF in order to gain an understanding on why the best model is not performing well. Plotting the actual and predicted value of the entropy along with the RMSF per position  one can get more insight on their relationship. All three measures are standardised in order to be comparable.
 
