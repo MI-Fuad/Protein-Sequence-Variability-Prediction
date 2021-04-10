@@ -131,11 +131,49 @@ In this study, k-fold Cross-validation was performed by dividing the data into f
 
 Holdout method lacks the ability to compare models directly for parts of the protein. On the other hand, k-fold cross-validation allows the direct comparison of the methods. This process is using the same training and testing sets for each of the methods allowing to directly compare them in order to discuss their performances by positions. Hence, moving forward comments made on the results of the accuracy are based on the k-fold cross-validation approach.
 
+
+## Results
 ### Best Machine Learning method
 <img src="images/img_013.png">
 
+As can be seen from the table above, the best performing method was **Random Forest** whereas the worst was **Linear Regression**.
+### Analysis of the results 
 
-## Results
+Once the predictions are made, it is possible to obtain **differences between the predicted value and the actual value** of the **entropy** in a vector. This latter, can be mapped directly on the protein using PyMol producing a 3D structure.
+
+Critical to the understanding the following results of this work is the notion of the blue parts of the protein, at a given fold, are being used by the different machine learning methods to predict on the rest of the parts (the ones with different colours). The variation of  colours is a representation of the range of error produced; **blue** being the lowest value of the error (approximated to zero) and **red** being the highest value of the error(maximum) as shown in figure below. The error has been standardised by the maximum value of the entropy from the true value of the dataset to facilitate, in principle, the comparison across the different structures.
+
+<img src="images/img_014.png">
+
+### Visualisation of the best performing method - Random Forest**
+
+To validate the implemented method, which forecasts the variability measure in protein sequence, differences between the predicted value and the actual value of the entropy is mapped in the protein structure and to visually represent the outcome of the overall best performing machine learning technique studied here, the Random Forest.
+
+<img src="images/img_015.png">  <img src="images/img_016.png">
+
+From the images of the error mapped in the protein, it is possible to notice the presence of mostly blue-toned regions, indicating overall lesser error. This is a reflection of the low error metrics obtained from the random forest method. Nonetheless, there are errors which are more prominent. 
+
+### Visual comparison between machine learning methods**
+
+The machine learning methods can be directly compared for a specific fold, as cross-validation allows this. Thanks to cross-validation it is possible to compare the different methods and inspect their performance by positions. In this section discussion of results obtained by fold is carried out. **Two interesting insights are found.**
+
+**Inspecting folds by method**
+
+Looking at the first fold for each of the method we can observe prominent differences. For this specific part of the protein, fold 1, it is quite intuitive to say linear regression performs the best amongst all the methods, at predicting the entropy value despite the fact it is overall the worst machine learning method studied here (see table of results above). Specifically for the presence of more blue toned colours than red ones. 
+
+**Outcome of this inspection suggests single folds having different accuracies across the methods. This implies regions of proteins having different behaviour in terms of information; therefore, it is more difficult to simply predict with only one method.**
+
+
+<img src="images/img_017.png">
+
+**Inspecting folds with high error**
+
+While examining the different folds mapping of performance, we can notice the presence of a pattern across the folds and methods. Specifically, it is possible to see certain regions of the protein having high difference between actual and predicted values. Observing figure  **Linear regression fold 1** image above mapped by the linear regression method, one can  notice a certain part of the prediction being purely red, indicating high error. Possibility of such behaviour is somewhat reasonable, given the fact it is the worst predictive method out the ones studied here. However, while comparing the outcome of random forest method for the same fold, in figure **Random forest fold 1**, a neighbouring region to the red part in **Linear regression fold 1**, is also noticeable. Likewise, decision tree and neural network perform not so well for this local fold. Amongst others, a similar occurrence can be observed in fold number 9 , as seen below. 
+
+**This is an indication of the machine learning models struggling to predict well for specific local folds.**
+
+<img src="images/img_018.png">
+
 
 
 
