@@ -124,7 +124,16 @@ The results obtained from the holdout validation method does not provide possibi
 <img src="images/img_012.png" width="600" height="300">
 
 It is more appropriate to say, it provides a general overview of the model performances. Based on the table of results below, for the random prediction on 30% of the data, it is possible to observe random forest performs the best, followed by decision tree, neural network and finally linear regression. However, it is possible to compare models directly using the results obtained from the next validation method.
+
 **K-fold cross-validation**
+
+In this study, k-fold Cross-validation was performed by dividing the data into folds that are consecutive. One might question, the appropriateness of using this approach as it may be biased due to the folds being chosen in a consecutive manner. However, the domain of the data well justifies this approach. Reason being, the protein is made out of a linear polymer, as it was discussed earlier; thus, analysing the data in order is appropriate.
+
+Holdout method lacks the ability to compare models directly for parts of the protein. On the other hand, k-fold cross-validation allows the direct comparison of the methods. This process is using the same training and testing sets for each of the methods allowing to directly compare them in order to discuss their performances by positions. Hence, moving forward comments made on the results of the accuracy are based on the k-fold cross-validation approach.
+
+### Best Machine Learning method
+<img src="images/img_013.png">
+
 
 ## Results
 
