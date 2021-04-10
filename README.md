@@ -98,16 +98,19 @@ For instance, when observing the gaps (‘ X. ‘), it is separated from all the
 Investigating the positions, it would probably map with part of the proteins which tends to have similar variability patterns across the amino acids. Reason being, the positions are clustered against the amino acids; if a position can generally accommodate more frequently hydrophobic residues, it would have a similar pattern to another position that can accommodate another hydrophobic residue. Due to time restrictions, it is not possible to demonstrate the pattern obtained from the clusters on the structures, which would visualise the explanation above.
 
 **Plot of entropy per position**
+
 <img src="images/img_009.png" width="600" height="300">
 
 As mentioned earlier, Shannon entropy provides a measure of variability. The graph above represents the plot of entropy value for each position from the multiple sequence alignment data. Hence, here for a given residue position from the alignment data, it is possible to observe the amount of variability of that position, more specifically, indicating the mutational flexibility. Locations with a higher value of entropy, indicate the most variable position, implying the possibility to accommodate a wider range of amino acids on that location. Vice versa, lower value of entropy implies a lower variability. From the line chart above, it is possible to see the presence of the least variable position, peaking negatively at around position where the entropy is very low.
 
 **Plot of RMSF per position**
+
 <img src="images/img_010.png" width="600" height="300">
 
 As previously mentioned, the Root means square fluctuation (RMSF) provides compressed information of the protein dynamics. As expected, from the graph above it can be observed the presence of positions, which are more dynamic than others. The flexibility or rigidity of a particular region can be perceived observing the values of the RMSF, where the more dynamic parts are specified by a high RMSF and the more static parts by the low RMSF. Observing the graph, this feature peaks towards the end of the sequence. Other prominent peaks are present approximately between position 37 and 60.
 
 **Plot of entropy with RMSF, per position**
+
 <img src="images/img_011.png" width="600" height="300">
 
 Combining the two concepts mentioned above, the variability and flexibility one can learn a lot about a protein. Thus, it is worthwhile plotting the values of RMSF and Shannon entropy on the same plot for each position of the protein sequence alignment data. The values were both standardised to be comparable. Inspecting the graph, it is possible to observe the lines diverging from one another on the ends; there are regions where they match roughly but others where they diverge. More on this is discussed under performance evaluation.
