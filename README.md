@@ -17,7 +17,7 @@ One of the challenges currently faced in protein modelling is the enormous searc
 Understanding the interaction between amino acid sequences with their corresponding three-dimensional structure and in turn, determining protein functions would be a significant breakthrough for researchers as it would offer endless possibilities for customised proteins. This revolution would be able to address several important challenges that society faces in the fields of biomedicine, for example in-silico rational drug design.
 
 ## Aim
-This research project focuses on addressing one of the challanges faced in the field of protein design, the enourmous search space, by trying to reduce it; identifying positions within a protein sequences where changes can be made.
+This research project focuses on addressing one of the challanges faced in the field of protein design, the enourmous search space. One way of doing this is by identifying positions within a protein sequence where changes can be made.
 
 ## Objective
 Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms** using machine learning methods. \
