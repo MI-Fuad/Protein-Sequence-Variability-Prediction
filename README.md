@@ -20,7 +20,10 @@ Understanding the interaction between amino acid sequences with their correspond
 This research project focuses on addressing one of the challanges faced in the field of protein design, the enourmous search space. One way of doing this is by identifying positions within a protein sequence where changes can be made.
 
 ## Objective
-Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms** using machine learning methods. \
+Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms.** 
+
+Use the aid of machine learning methods to do so.
+
 The variability for a position significes, how many different amino acids are possible to accommodate on the position. This would in turn reduce the search space.
 
 # Methods 
