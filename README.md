@@ -3,7 +3,10 @@ This project investigates the protein sequence variability prediction using mach
 
 # Motivation 
 Proteins are complexes of varying size, structure and function that enables essentially all biological processes in every organism.
-They are linear polymers of a combination of monomer units called amino acids. The sequence of amino acids in turn, folds and adopts into a 3-D structure of the overall protein through various chemical interactions and bonds between them. The remarkable protein functions are efficiently dictated by sequences of amino acids.
+
+They are linear polymers of a combination of monomer units called amino acids. 
+
+The sequence of amino acids in turn, folds and adopts into a 3-D structure of the overall protein through various chemical interactions and bonds between them. The remarkable protein functions are efficiently dictated by sequences of amino acids.
 
 <img src="images/img_001.png" width="500" height="300">
 
@@ -11,10 +14,11 @@ During the protein folding process it is crucial the right structure is maintain
 
 One of the challenges currently faced in protein modelling is the enormous search space, which results in a computationally NP-hard problem [Pierce and Winfree, 2002].
 
-Therefore, understanding the interaction between amino acid sequences with their corresponding three-dimensional structure and in turn, determining protein functions would be a significant breakthrough for researchers as it would offer endless possibilities for customised proteins. This revolution would be able to address several important challenges that society faces in the fields of biomedicine, for example in-silico rational drug design.
+Understanding the interaction between amino acid sequences with their corresponding three-dimensional structure and in turn, determining protein functions would be a significant breakthrough for researchers as it would offer endless possibilities for customised proteins. This revolution would be able to address several important challenges that society faces in the fields of biomedicine, for example in-silico rational drug design.
 
 ## Aim
-This research project focuses on addressing some of the challenges currently faced in the field of protein design one of which is the enourmous search space.
+This research project focuses on addressing one of the challanges faced in the field of protein design, the enourmous search space, by trying to reduce it; identifying positions within a protein sequences where changes can be made.
+
 ## Objective
 Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms** using machine learning methods. \
 The variability for a position significes, how many different amino acids are possible to accommodate on the position. This would in turn reduce the search space.
