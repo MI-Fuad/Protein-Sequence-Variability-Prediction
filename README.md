@@ -191,7 +191,8 @@ While examining the different folds mapping of performance, we can notice the pr
 <p align="center">
  <img src="images/img_018.png">
 </p>
-### Comparison of best and worst model and discussions of findings
+
+### Best and worst model comparison with discussions of findings
 
 One of the richest form of data visualisation is scatter plots of the actual against the predicted values for the prediction. Reason being, it provides a sense of how accurate a model is. From the **graph of the linear regression** the dots are more scattered around. Hence, using this model for prediction would result overall in less accurate results. On the other hand, the **graph of the random forest** below shows a more congregated forming overall a strong correlation between the models prediction o and the actual values for the entropy.
 
