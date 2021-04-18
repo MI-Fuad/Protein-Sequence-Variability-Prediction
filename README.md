@@ -29,7 +29,7 @@
 
 This project investigates the protein sequence variability prediction using machine learning methods.
 
-<h2 id="Overview"> Overview <h2>
+<h2 id="Overview"> Overview </h2>
 
 The study was motivated to address one of the challenges faced currently in protein structure prediction from its sequence: the enormous  search space. This research aimed at developing a sophisticated machine learning method to predict sequence variability from the information on the composition of the protein called Lysozyme in various organisms coupled with the dynamics. Reason being, the search space would be reduced significantly. 
 
@@ -73,15 +73,6 @@ The primary research aim is to design, implement and test machine learning model
 - Develop pipeline in Python to test more sophisticated machine learning models such as **decision trees, random forest and deep neural networks** to try predicting the most variable positions.
 - Evaluate the models by using general machine learning evaluation methods such as MSE, RMSE, MAE.
 - Discuss on the results
-
-
-
-
-Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms.** 
-
-Use the aid of machine learning methods to do so.
-
-The variability for a position significes, how many different amino acids are possible to accommodate on the position. This would in turn reduce the search space.
 
 <h1 id="Methods"> 5. Methods </h1>
 
@@ -129,9 +120,9 @@ It is fundamentally essential to utilise robust techniques to train and evaluate
 - k-fold cross-validation
 
 <h2 id="Performance_Evaluation_Metrics"> Performance Evaluation Metrics </h2>
--  The Mean Squared Error (MSE)
--  The Root Mean Squared Error(RMSE)
--  Mean Absolute Error (MAE)
+- The Mean Squared Error (MSE)
+- The Root Mean Squared Error(RMSE)
+- Mean Absolute Error (MAE)
  
 
 <h1 id="Data_Analysis_and_Results"> 6. Data Analysis and Results </h1>
@@ -186,6 +177,7 @@ As previously mentioned, the Root means square fluctuation (RMSF) provides compr
 Combining the two concepts mentioned above, the variability and flexibility one can learn a lot about a protein. Thus, it is worthwhile plotting the values of RMSF and Shannon entropy on the same plot for each position of the protein sequence alignment data. The values were both standardised to be comparable. Inspecting the graph, it is possible to observe the lines diverging from one another on the ends; there are regions where they match roughly but others where they diverge. More on this is discussed under performance evaluation.
 
 <h2 id="Performance_Evaluation"> Performance Evaluation </h2>
+
 ### Analysis based on validation method
 **Holdout Method**
 
@@ -204,10 +196,12 @@ Holdout method lacks the ability to compare models directly for parts of the pro
 
 
 <h2 id="Results"> Results and Discussion </h2>
+
 ### Best Machine Learning method
 <img src="images/img_013.png">
 
 As can be seen from the table above, the best performing method was **Random Forest** whereas the worst was **Linear Regression**.
+
 ### Analysis of the results 
 
 Once the predictions are made, it is possible to obtain **differences between the predicted value and the actual value** of the **entropy** in a vector. This latter, can be mapped directly on the protein using PyMol producing a 3D structure.
@@ -216,6 +210,7 @@ Critical to the understanding the following results of this work is the notion o
 <p align="center">
  <img src="images/img_014.png">
 </p>
+
 ### Visualisation of the best performing method - Random Forest**
 
 To validate the implemented method, which forecasts the variability measure in protein sequence, differences between the predicted value and the actual value of the entropy is mapped in the protein structure and to visually represent the outcome of the overall best performing machine learning technique studied here, the Random Forest.
@@ -226,7 +221,7 @@ To validate the implemented method, which forecasts the variability measure in p
 
 From the images of the error mapped in the protein, it is possible to notice the presence of mostly blue-toned regions, indicating overall lesser error. This is a reflection of the low error metrics obtained from the random forest method. Nonetheless, there are errors which are more prominent. 
 
-### Visual comparison between machine learning methods**
+### Visual comparison between machine learning methods
 
 The machine learning methods can be directly compared for a specific fold, as cross-validation allows this. Thanks to cross-validation it is possible to compare the different methods and inspect their performance by positions. In this section discussion of results obtained by fold is carried out. **Two interesting insights are found.**
 
