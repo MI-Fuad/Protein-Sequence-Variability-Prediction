@@ -1,7 +1,30 @@
-# Protein Sequence Variability Prediction
+<h1> Table of Contents </h1>
+
+<li><a href="#Protein_Sequence_Variability_Prediction">1. Protein Sequence Variability Prediction</a></li>
+<li><a href="#Motivation">2. Motivation</a></li>
+<li><a href="#Aim">3. Aim</a></li>
+<li><a href="#Objective">4. Objective</a></li>
+<li><a href="#Methods">5. Methods</a></li>
+<ul> 
+ <li><a href="#Data_Collection_Process">5.1 Data Collection Process</a></li>
+ <li><a href="#Data_Preparation">5.2 Data Preparation </a></li>
+ <li><a href="#Machine_Learning_Methods">5.3 Machine Learning Methods </a></li>
+ <li><a href="#Model_Evaluation_Teachniques">5.4 Model Evaluation Techniques - Training and Testing </a></li>
+ <li><a href="#Performance_Evaluation_Metrics">5.5 Performance Evaluation Metrics </a></li> 
+</ul> 
+<li><a href="#Data_Analysis_and_Results">6. Data Analysis and Results</a></li>
+<ul>
+ <li><a href="#Exploratory_Data_Analysis">6.1 Exploratory Data Analysis</a></li>
+ <li><a href="#Performance_Evaluation">6.2 Performance Evaluation</a></li>
+ <li><a href="#Results">6.3 Results and Discussion</a></li>
+</ul> 
+
+
+
+<h1 id="Protein_Sequence_Variability_Prediction">Protein Sequence Variability Prediction</h1>
 This project investigates the protein sequence variability prediction using machine learning methods.
 
-# Motivation 
+<h1 id="Motivation">Motivation </h1>
 Proteins are complexes of varying size, structure and function that enables essentially all biological processes in every organism.
 
 They are linear polymers of a combination of monomer units called amino acids. 
@@ -17,19 +40,20 @@ One of the challenges currently faced in protein modelling is the enormous searc
 
 Understanding the interaction between amino acid sequences with their corresponding three-dimensional structure and in turn, determining protein functions would be a significant breakthrough for researchers as it would offer endless possibilities for customised proteins. This revolution would be able to address several important challenges that society faces in the fields of biomedicine, for example in-silico rational drug design.
 
-## Aim
+<h1 id="Aim"> Aim</h1>
 This research project focuses on addressing one of the challanges faced in the field of protein design, the enourmous search space. One way of doing this is by identifying positions within a protein sequence where changes can be made.
 
-## Objective
+<h1 id="Objective"> Objective </h1>
 Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms.** 
 
 Use the aid of machine learning methods to do so.
 
 The variability for a position significes, how many different amino acids are possible to accommodate on the position. This would in turn reduce the search space.
 
-# Methods 
+<h1 id="Methods"> Methods </h1>
 
-## Data Collection Process
+<h2 id ="Data_Collection_Process"> Data Collection Process</h2>
+
 The data collection and some preparation process for the analysis has been done in collaboration with members of the Computational Biology lab of Brunel University London. 
 The main source of data used to gain knowledge involving protein structure is the “Protein Data Bank”. The protein on which the study was conducted on is **lysozyme**, given the broad knowledge available on its functions and dymanics, thus, providing a solid base for examples to be provided to the machine learning methods.
 
@@ -43,7 +67,7 @@ Molecular simulation methods are utilised to simulate and analyse physical movem
 
 The lab team has run molecular-dynamic simulations software GROMACS using a coarse-grained force field called SIRAH. As a result, the **Root-mean square fluctuation (RMSF)** was calculated from the coordinates of the simulation, which essentially provides compressed information of the protein dynamics. The **RMSF** measures the deviation of the coarse-grained model position with respect to a reference coordinates over time.
 
-## Data Preparation 
+<h2 id="Data_Preparation">Data Preparation </h2>
 
 As mentioned above, the information on the composition of this protein in different organisms, was obtained performing MSA using HHblits.This resulted into a matrix of 164 columns and 1112 rows. Thus 1112 sequences from various organisms with various combinations of the 20 amino acids were aligned. \
 From this matrix, valuable information could be gained that was required for the rest of the analysis. \
@@ -55,7 +79,7 @@ From this the **Shannon’s entropy** could be calculated as a measure of **vari
 <img src="images/img_002.png">
 
 
-## Machine Learning Methods
+<h2 id="Machine_Learning_Methods"> Machine Learning Methods </h2>
 
 Machine Learning (ML) methods given their capabilities to identify hidden patterns in the provided data by learning over time in an self-directed manner are suitable for predicting positions in an amino acid sequence where structural changes can be made. Amongst the two main types of Machine Learning, supervised leaning is of interest for the purpose of this study as the aim is to try building a model which is able capture the relationship between **frequencies of residue occurrence** provided by the data on the composition of a protein from different organisms (MSA), coupled with the **protein dynamics (RMSF)** and the given example of what the **output (Shannon's entropy)** should look like. 
 
@@ -65,21 +89,21 @@ The ML methods explored here were:
 - Random Forests
 - Deep Neural Networks
 
-## Model Evaluation Techniques - Training and Testing
+<h2 id="Model_Evaluation_Teachniques"> Model Evaluation Techniques - Training and Testing </h2>
 
 It is fundamentally essential to utilise robust techniques to train and evaluate model’s performance on the training data available at hand, as the more reliable the estimate of a model, the more one can push the model and be self-assured of it will interpret to the operational utilisation of the model. Evaluation techniques used: 
 - Holdout method
 - k-fold cross-validation
 
-## Performance Evaluation Metrics
+<h2 id="Performance_Evaluation_Metrics"> Performance Evaluation Metrics </h2>
 -  The Mean Squared Error (MSE)
 -  The Root Mean Squared Error(RMSE)
 -  Mean Absolute Error (MAE)
  
 
-# Data Analysis and Results 
+<h1 id="Data_Analysis_and_Results"> Data Analysis and Results </h1>
 
-## Exploratory Data Analysis
+<h2 id="Exploratory_Data_Analysis"> Exploratory Data Analysis </h2>
 
 **Multiple Sequence Alignment data**
 
@@ -128,7 +152,7 @@ As previously mentioned, the Root means square fluctuation (RMSF) provides compr
 
 Combining the two concepts mentioned above, the variability and flexibility one can learn a lot about a protein. Thus, it is worthwhile plotting the values of RMSF and Shannon entropy on the same plot for each position of the protein sequence alignment data. The values were both standardised to be comparable. Inspecting the graph, it is possible to observe the lines diverging from one another on the ends; there are regions where they match roughly but others where they diverge. More on this is discussed under performance evaluation.
 
-## Performance Evaluation
+<h2 id="Performance_Evaluation"> Performance Evaluation </h2>
 ### Analysis based on validation method
 **Holdout Method**
 
@@ -146,7 +170,7 @@ In this study, k-fold Cross-validation was performed by dividing the data into f
 Holdout method lacks the ability to compare models directly for parts of the protein. On the other hand, k-fold cross-validation allows the direct comparison of the methods. This process is using the same training and testing sets for each of the methods allowing to directly compare them in order to discuss their performances by positions. Hence, moving forward comments made on the results of the accuracy are based on the k-fold cross-validation approach.
 
 
-## Results
+<h2 id="Results"> Results and Discussion </h2>
 ### Best Machine Learning method
 <img src="images/img_013.png">
 
