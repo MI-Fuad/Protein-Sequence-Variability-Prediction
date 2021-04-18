@@ -1,10 +1,13 @@
 <h1> Table of Contents </h1>
 
-<li><a href="#Protein_Sequence_Variability_Prediction">1. Protein Sequence Variability Prediction</a></li>
-<li><a href="#Motivation">2. Motivation</a></li>
-<li><a href="#Aim">3. Aim</a></li>
-<li><a href="#Objective">4. Objective</a></li>
-<li><a href="#Methods">5. Methods</a></li>
+<li><a href="#Protein_Sequence_Variability_Prediction">1 Protein Sequence Variability Prediction</a></li>
+<ul>
+  <li><a href="#Overview">1.1 Overview </a></li>
+</ul> 
+<li><a href="#Motivation">2 Motivation</a></li>
+<li><a href="#Aim">3 Aim</a></li>
+<li><a href="#Objectives">4 Objectives</a></li>
+<li><a href="#Methods">5 Methods</a></li>
 <ul> 
  <li><a href="#Data_Collection_Process">5.1 Data Collection Process</a></li>
  <li><a href="#Data_Preparation">5.2 Data Preparation </a></li>
@@ -12,17 +15,34 @@
  <li><a href="#Model_Evaluation_Teachniques">5.4 Model Evaluation Techniques - Training and Testing </a></li>
  <li><a href="#Performance_Evaluation_Metrics">5.5 Performance Evaluation Metrics </a></li> 
 </ul> 
-<li><a href="#Data_Analysis_and_Results">6. Data Analysis and Results</a></li>
+<li><a href="#Data_Analysis_and_Results">6 Data Analysis and Results</a></li>
 <ul>
  <li><a href="#Exploratory_Data_Analysis">6.1 Exploratory Data Analysis</a></li>
  <li><a href="#Performance_Evaluation">6.2 Performance Evaluation</a></li>
  <li><a href="#Results">6.3 Results and Discussion</a></li>
 </ul> 
+<li><a href="#Limitations">7 Limitations and future work </a></li>
 
 
 
 <h1 id="Protein_Sequence_Variability_Prediction">Protein Sequence Variability Prediction</h1>
+
 This project investigates the protein sequence variability prediction using machine learning methods.
+
+<h2 id="Overview"> Overview <h2>
+
+The study was motivated to address one of the challenges faced currently in protein structure prediction from its sequence: the enormous  search space. This research aimed at developing a sophisticated machine learning method to predict sequence variability from the information on the composition of the protein called Lysozyme in various organisms coupled with the dynamics. Reason being, the search space would be reduced significantly. 
+
+More specifically, multiple sequence alignment data of Lysozyme carry the evolutionary information of different organisms; from this a measure of **variability** per position could be calculated. On the other hand the information on the protein dynamics were provided by the computational lab, in a compressed form, representing a measure of **flexibility**. Eventually, the relative frequencies of amino acids , the measure of flexibility and the entropy were grouped to form the final dataset to conduct the study.
+
+Exploratory data analysis was carried out on the multiple sequence alignment, relative frequency matrix, dynamical and variability measures to gain insights on the data prior to performing predictive methods.
+
+To predict the variability per position, various machine learning methods were used to learn the complex relationship between the features and the output. Methods include linear regression, decision trees, random forest and neural networks. The best method to perform the prediction was identified based on performance metrics.
+
+The best and worst method were compared, evaluated and discussed thoroughly within the same framework, from which insightful findings were obtained.
+
+In conclusion, the study identified the best method to predict the variability. Moreover, it identified the regions which are the easier to predict and which are not.
+
 
 <h1 id="Motivation">Motivation </h1>
 Proteins are complexes of varying size, structure and function that enables essentially all biological processes in every organism.
@@ -40,10 +60,23 @@ One of the challenges currently faced in protein modelling is the enormous searc
 
 Understanding the interaction between amino acid sequences with their corresponding three-dimensional structure and in turn, determining protein functions would be a significant breakthrough for researchers as it would offer endless possibilities for customised proteins. This revolution would be able to address several important challenges that society faces in the fields of biomedicine, for example in-silico rational drug design.
 
-<h1 id="Aim"> Aim</h1>
-This research project focuses on addressing one of the challanges faced in the field of protein design, the enourmous search space. One way of doing this is by identifying positions within a protein sequence where changes can be made.
+<h1 id="Aim"> Aim</h1> 
 
-<h1 id="Objective"> Objective </h1>
+The primary research aim is to design, implement and test machine learning models to try predicting the most useful position for a mutation for protein design, given  information on the evolutionary history of sequence and the dynamics of the structure. This would focus on addressing one of the challanges faced in the field of protein design, as mentioned earlier, the enourmous search space.
+
+
+<h1 id="Objectives"> Objectives </h1>
+
+- Gather and analyse the literature review.
+- Collect and define a suitable dataset. This requires to be built containing information of amino acid sequences of the same protein present in various living organisms and aligned to identify the variability as a quantitative measure combined with the relevant dynamics of the structure.
+- Develop pipeline in Python to test a simple multiple linear regression model to try predicting the most variable positions.
+- Develop pipeline in Python to test more sophisticated machine learning models such as **decision trees, random forest and deep neural networks** to try predicting the most variable positions.
+- Evaluate the models by using general machine learning evaluation methods such as MSE, RMSE, MAE.
+- Discuss on the results
+
+
+
+
 Try to learn and predict the **variability** of the positions in an amino acid sequence where structural changes can be made to alter the protein function, while preserving also the correct folding without causing diseases within the organism, given the data on the **protein dynamics** and the data on the **composition of a protein in different organisms.** 
 
 Use the aid of machine learning methods to do so.
@@ -239,7 +272,10 @@ The graph presents quite insightful observations. As already explained, the pred
 
 As it can be seen from the graph, roughly between position 38 and 50 the random forest is not performing at its best. At the same time, for this range of positions the RMSF values are high. This indicates that regions which are more flexible are more difficult to predict. 
 
+<h1 id="Limitations"> Limitations and future work </h1>
 
+The dataset is small with only 164 observations. Having a bigger dataset, the prediction would result in a more realistic accuracy. Thus a question remains: Is this accuracy representative of most of the proteins or is it only partial? 
 
+In this study we were trying to predict how variable is a position based on entropy. Due to time limitations, it was not possible to follow up to the next step. Once the variability can be predicted accurately, in future using a much larger dataset with more dynamical properties of the protein and predicting with a RNN would be able to provide a more realistic accuracy while trying to predict specifically which amino acids can the most variable position change into.
 
 
