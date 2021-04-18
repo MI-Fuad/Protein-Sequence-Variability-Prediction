@@ -1,13 +1,13 @@
 <h1> Table of Contents </h1>
 
-<li><a href="#Protein_Sequence_Variability_Prediction">1 Protein Sequence Variability Prediction</a></li>
+<li><a href="#Protein_Sequence_Variability_Prediction">1. Protein Sequence Variability Prediction</a></li>
 <ul>
   <li><a href="#Overview">1.1 Overview </a></li>
 </ul> 
-<li><a href="#Motivation">2 Motivation</a></li>
-<li><a href="#Aim">3 Aim</a></li>
-<li><a href="#Objectives">4 Objectives</a></li>
-<li><a href="#Methods">5 Methods</a></li>
+<li><a href="#Motivation">2. Motivation</a></li>
+<li><a href="#Aim">3. Aim</a></li>
+<li><a href="#Objectives">4. Objectives</a></li>
+<li><a href="#Methods">5. Methods</a></li>
 <ul> 
  <li><a href="#Data_Collection_Process">5.1 Data Collection Process</a></li>
  <li><a href="#Data_Preparation">5.2 Data Preparation </a></li>
@@ -15,17 +15,17 @@
  <li><a href="#Model_Evaluation_Teachniques">5.4 Model Evaluation Techniques - Training and Testing </a></li>
  <li><a href="#Performance_Evaluation_Metrics">5.5 Performance Evaluation Metrics </a></li> 
 </ul> 
-<li><a href="#Data_Analysis_and_Results">6 Data Analysis and Results</a></li>
+<li><a href="#Data_Analysis_and_Results">6. Data Analysis and Results</a></li>
 <ul>
  <li><a href="#Exploratory_Data_Analysis">6.1 Exploratory Data Analysis</a></li>
  <li><a href="#Performance_Evaluation">6.2 Performance Evaluation</a></li>
  <li><a href="#Results">6.3 Results and Discussion</a></li>
 </ul> 
-<li><a href="#Limitations">7 Limitations and future work </a></li>
+<li><a href="#Limitations">7. Limitations and future work </a></li>
 
 
 
-<h1 id="Protein_Sequence_Variability_Prediction">Protein Sequence Variability Prediction</h1>
+<h1 id="Protein_Sequence_Variability_Prediction">1. Protein Sequence Variability Prediction</h1>
 
 This project investigates the protein sequence variability prediction using machine learning methods.
 
@@ -44,7 +44,7 @@ The best and worst method were compared, evaluated and discussed thoroughly with
 In conclusion, the study identified the best method to predict the variability. Moreover, it identified the regions which are the easier to predict and which are not.
 
 
-<h1 id="Motivation">Motivation </h1>
+<h1 id="Motivation">2. Motivation </h1>
 Proteins are complexes of varying size, structure and function that enables essentially all biological processes in every organism.
 
 They are linear polymers of a combination of monomer units called amino acids. 
@@ -60,12 +60,12 @@ One of the challenges currently faced in protein modelling is the enormous searc
 
 Understanding the interaction between amino acid sequences with their corresponding three-dimensional structure and in turn, determining protein functions would be a significant breakthrough for researchers as it would offer endless possibilities for customised proteins. This revolution would be able to address several important challenges that society faces in the fields of biomedicine, for example in-silico rational drug design.
 
-<h1 id="Aim"> Aim</h1> 
+<h1 id="Aim"> 3. Aim</h1> 
 
 The primary research aim is to design, implement and test machine learning models to try predicting the most useful position for a mutation for protein design, given  information on the evolutionary history of sequence and the dynamics of the structure. This would focus on addressing one of the challanges faced in the field of protein design, as mentioned earlier, the enourmous search space.
 
 
-<h1 id="Objectives"> Objectives </h1>
+<h1 id="Objectives"> 4. Objectives </h1>
 
 - Gather and analyse the literature review.
 - Collect and define a suitable dataset. This requires to be built containing information of amino acid sequences of the same protein present in various living organisms and aligned to identify the variability as a quantitative measure combined with the relevant dynamics of the structure.
@@ -83,7 +83,7 @@ Use the aid of machine learning methods to do so.
 
 The variability for a position significes, how many different amino acids are possible to accommodate on the position. This would in turn reduce the search space.
 
-<h1 id="Methods"> Methods </h1>
+<h1 id="Methods"> 5. Methods </h1>
 
 <h2 id ="Data_Collection_Process"> Data Collection Process</h2>
 
@@ -134,7 +134,7 @@ It is fundamentally essential to utilise robust techniques to train and evaluate
 -  Mean Absolute Error (MAE)
  
 
-<h1 id="Data_Analysis_and_Results"> Data Analysis and Results </h1>
+<h1 id="Data_Analysis_and_Results"> 6. Data Analysis and Results </h1>
 
 <h2 id="Exploratory_Data_Analysis"> Exploratory Data Analysis </h2>
 
@@ -272,7 +272,7 @@ The graph presents quite insightful observations. As already explained, the pred
 
 As it can be seen from the graph, roughly between position 38 and 50 the random forest is not performing at its best. At the same time, for this range of positions the RMSF values are high. This indicates that regions which are more flexible are more difficult to predict. 
 
-<h1 id="Limitations"> Limitations and future work </h1>
+<h1 id="Limitations"> 7. Limitations and future work </h1>
 
 The dataset is small with only 164 observations. Having a bigger dataset, the prediction would result in a more realistic accuracy. Thus a question remains: Is this accuracy representative of most of the proteins or is it only partial? 
 
